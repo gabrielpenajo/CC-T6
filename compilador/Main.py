@@ -5,6 +5,8 @@ from TFTLexerErrorListener import TFTLexerErrorListener
 from TFTParser import TFTParser
 from TFTParserErrorListener import TFTParserErrorListener
 from TFTLexer import TFTLexer
+from TFTSemantico import TFTSemantico
+from TFTSemanticoUtils import TFTSemanticoUtils
 
 # Código responsável por ler os tokens gerados pela analisador léxico e salvar em um arquivo
 def main(argv): 
@@ -29,7 +31,12 @@ def main(argv):
 
     try:
         # Executa o parser para análise sintática
-        parser.programa()
+        tftSemantico = TFTSemantico()
+        
+        tftSemantico.visitPrograma(parser.programa())
+        for erro in TFTSemanticoUtils.errosSemanticos:
+            output_stream.write(erro + "\n")
+        output_stream.write("\nFim da compilacao\n")
     except Exception as e:
         # Deteccao de erro sintatico e lexico
         # gracas aos listeners que implementamos
