@@ -13,3 +13,13 @@ class TFTSemanticoUtils:
     def adicionarErroSemantico(token, mensagem: str):
         linha: int = token.line
         TFTSemanticoUtils.errosSemanticos.append(f"Linha {linha}: {mensagem}")
+    
+    @staticmethod
+    def getTipoString(tipo: Tipo):
+        if tipo == Tipo.CARACTERISTICA:
+            return 'caracteristica'
+        if tipo == Tipo.SINERGIA:
+            return 'sinergia'
+        if tipo == Tipo.UNIDADE:
+            return 'unidade'
+        return 'invalido'
