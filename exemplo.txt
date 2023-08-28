@@ -8,6 +8,7 @@ caracteristica ionia // define ionia na gramática
 caracteristica demacia // define demacia na gramática
 
 sinergia freljord1 requer 2 freljord // especifica a quantidade de unidades diferentes daquela característica
+sinergia freljord2 requer 4 freljord // especifica a quantidade de unidades diferentes daquela característica
 sinergia mago1 requer 1 mago // especifica a quantidade de unidades diferentes daquela característica
 sinergia atirador1 requer 2 atirador // especifica a quantidade de unidades diferentes daquela característica
 sinergia demacia1 requer 1 demacia // especifica a quantidade de unidades diferentes daquela característica
@@ -15,11 +16,13 @@ sinergia demacia2 requer 2 demacia // especifica a quantidade de unidades difere
 
 unidade ashe representa atirador, freljord
 unidade lissandra representa freljord, mago
+unidade sejuani representa freljord
+unidade olaf representa freljord
 unidade jhin representa atirador, ionia
 unidade lux representa demacia, mago
 unidade lucian representa demacia, atirador
 
-encontrar sinergias para ashe, jhin, lissandra // retorna quais sinergias podem ser feitas
+encontrar sinergias para ashe, jhin, lissandra, sejuani, olaf // retorna quais sinergias podem ser feitas
 encontrar composicao para freljord1, demacia2 // retorna quais campeões são necessários 
 
 // saida gerada

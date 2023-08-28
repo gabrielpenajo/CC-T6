@@ -40,9 +40,11 @@ def main(argv):
         for erro in TFTSemanticoUtils.errosSemanticos:
             output_stream.write(erro + "\n")
         if len(TFTSemanticoUtils.errosSemanticos) == 0:
-            print("Tudo certo")
             calculadora = Calculadora()
             calculadora.visitPrograma(arvore)
+            
+            for resposta in calculadora.respostas:
+                output_stream.write(resposta)
         else:
             output_stream.write("\nFim da compilacao\n")
     except Exception as e:
