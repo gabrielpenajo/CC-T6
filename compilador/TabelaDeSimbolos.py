@@ -12,6 +12,9 @@ class InfoTipo:
         self.tipo = tipo
         self.quantidade = quantidade
         self.caracteristicas = caracteristicas
+    
+    def __str__(self) -> str:
+        return f'tipo={self.tipo} quantidade={self.quantidade} caracteristicas={self.caracteristicas}'
 
 class TabelaDeSimbolos():
     def __init__(self, tipo: Tipo):
@@ -25,10 +28,10 @@ class TabelaDeSimbolos():
 
     def adicionar(self, nome: str, tipo: Tipo, quantidade: int = 0, caracteristicas: list[str] = list()):
         entrada = TabelaDeSimbolos.EntradaTabelaSimbolos(nome, tipo, quantidade, caracteristicas)
-        self.tabela[entrada.nome] = entrada.infoTipo.tipo
+        self.tabela[entrada.nome] = entrada.infoTipo
     
     def existe(self, nome: str) -> bool:
         return self.tabela.get(nome) != None
     
     def verificar(self, nome : str):
-        return self.tabela.get(nome)
+        return self.tabela.get(nome).tipo
