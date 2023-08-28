@@ -34,8 +34,11 @@ class TFTSemantico(TFTVisitor) :
             TFTSemanticoUtils.adicionarErroSemantico(sinergia.start, f'identificador {id_sinergia} ja declarado anteriormente')
         else:
             caracteristica = ctx.caracteristica().getText()
-            quantidade = int(ctx.NUMERO().getText())
-            self.tabela.adicionar(id_sinergia, Tipo.SINERGIA, quantidade=quantidade, caracteristicas=list(caracteristica))
+            if not self.tabela.existe(caracteristica):
+                TFTSemanticoUtils.adicionarErroSemantico(sinergia.start, f'caracteristica {caracteristica} nao declarada')
+            else:
+                quantidade = int(ctx.NUMERO().getText())
+                self.tabela.adicionar(id_sinergia, Tipo.SINERGIA, quantidade=quantidade, caracteristicas=list(caracteristica))
         return super().visitDeclaracao_sinergia(ctx)
     
     def visitDeclaracao_unidade(self, ctx:TFTParser.Declaracao_unidadeContext):

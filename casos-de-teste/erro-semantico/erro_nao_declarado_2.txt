@@ -1,0 +1,23 @@
+caracteristica atirador
+caracteristica mago
+
+caracteristica ionia
+caracteristica demacia
+
+sinergia atirador1 requer 2 atirador
+sinergia freljord2 requer 4 freljord
+sinergia mago1 requer 1 mago
+sinergia atirador1 requer 2 atirador
+sinergia demacia1 requer 1 demacia
+sinergia demacia2 requer 2 demacia
+
+unidade ashe representa atirador, freljord
+unidade lissandra representa freljord, mago
+unidade sejuani representa freljord
+unidade olaf representa freljord
+unidade jhin representa atirador, ionia
+unidade lux representa demacia, mago
+unidade lucian representa demacia, atirador
+
+encontrar sinergias para ashe, jhin, lissandra, sejuani, olaf
+encontrar composicao para freljord1, demacia2

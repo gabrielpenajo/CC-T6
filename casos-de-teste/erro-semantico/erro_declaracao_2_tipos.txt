@@ -1,0 +1,4 @@
+caracteristica atirador
+caracteristica freljord
+
+sinergia atirador requer 2 freljord

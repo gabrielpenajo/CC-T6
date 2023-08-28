@@ -34,4 +34,6 @@ class TabelaDeSimbolos():
         return self.tabela.get(nome) != None
     
     def verificar(self, nome : str):
+        if not self.tabela.get(nome):
+            return None
         return self.tabela.get(nome).tipo
