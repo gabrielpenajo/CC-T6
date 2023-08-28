@@ -30,9 +30,8 @@ def main(argv):
     parser.removeErrorListeners()
     parser.addErrorListener(TFTParserErrorListener())
 
-    arvore = parser.programa()
-
     try:
+        arvore = parser.programa()
         # Executa o parser para análise sintática
         tftSemantico = TFTSemantico()
         

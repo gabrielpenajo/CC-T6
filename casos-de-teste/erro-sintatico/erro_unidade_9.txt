@@ -1,0 +1,1 @@
+unidade arroz, feijao, frango, salada representa prato_feito
