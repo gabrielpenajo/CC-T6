@@ -52,6 +52,10 @@ Para desenvolvimento do compilador responsável por gerar análise léxica, sint
  - Antlr 4.13 (https://github.com/antlr/antlr4/blob/master/doc/python-target.md)
  - Python 3 (https://www.python.org/downloads/)
 
+## Execução
+
+Vídeo explicando o funcionamento da linguagem e o modo de execução.  
+
 https://github.com/gabrielpenajo/CC-T6/assets/55462743/a450e506-b600-4b37-99c3-be6cf31db95e
 
 
