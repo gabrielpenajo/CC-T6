@@ -46,13 +46,6 @@ class Calculadora(TFTVisitor) :
     def visitSaida(self, ctx: TFTParser.SaidaContext):
         return super().visitSaida(ctx)
     
-    def visitSaida_composicao(self, ctx: TFTParser.Saida_composicaoContext):
-        for sinergia in ctx.sinergia():
-            entrada: InfoTipo = self.tabela.tabela.get(sinergia.getText())
-            print(sinergia.getText(), entrada)
-            # TODO: implementar calculo de unidades que podem ser utilizadas
-        return super().visitSaida_composicao(ctx)
-    
     def visitSaida_sinergia(self, ctx: TFTParser.Saida_sinergiaContext):
         possibilidades = []
         unidades = []

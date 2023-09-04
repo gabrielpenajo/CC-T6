@@ -59,11 +59,6 @@ class TFTVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by TFTParser#saida_composicao.
-    def visitSaida_composicao(self, ctx:TFTParser.Saida_composicaoContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by TFTParser#saidas.
     def visitSaidas(self, ctx:TFTParser.SaidasContext):
         return self.visitChildren(ctx)

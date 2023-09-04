@@ -1,0 +1,19 @@
+// codigo a ser compilado
+
+caracteristica jah
+caracteristica podi
+caracteristica aomossar
+
+sinergia jah1 requer 1 jah
+sinergia podi1 requer 1 podi
+sinergia aomossar1 requer 1 aomossar
+
+unidade jahh representa jah
+unidade podii representa podi
+unidade allmosar representa aomossar
+
+encontrar sinergias para jahh, podii, allmosar // retorna quais sinergias podem ser feitas
+
+// saida gerada
+
+// as unidades jahh, podii e allmosar ativam as sinergias jah1, podi1, aomossar1

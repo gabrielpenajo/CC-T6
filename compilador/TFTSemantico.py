@@ -57,21 +57,11 @@ class TFTSemantico(TFTVisitor) :
     def visitSaida(self, ctx: TFTParser.SaidaContext):
         return super().visitSaida(ctx)
     
-    def visitSaida_composicao(self, ctx: TFTParser.Saida_composicaoContext):
-        for sinergia in ctx.sinergia():
-            tipo = self.tabela.verificar(sinergia.getText())
-            if not self.tabela.existe(sinergia.getText()):
-                TFTSemanticoUtils.adicionarErroSemantico(sinergia.start, f'sinergia {sinergia.getText()} nao declarada')
-            elif tipo != Tipo.SINERGIA:
-                TFTSemanticoUtils.adicionarErroSemantico(sinergia.start, f'identificador {sinergia.getText()} nao representa uma sinergia\n  tipo esperado: sinergia\n  tipo encontrado: { TFTSemanticoUtils.getTipoString(tipo) }')
-        return super().visitSaida_composicao(ctx)
-    
     def visitSaida_sinergia(self, ctx: TFTParser.Saida_sinergiaContext):
         for unidade in ctx.unidade():
             tipo = self.tabela.verificar(unidade.getText())
             if not self.tabela.existe(unidade.getText()):
                 TFTSemanticoUtils.adicionarErroSemantico(unidade.start, f'unidade {unidade.getText()} nao declarada')
             elif tipo != Tipo.UNIDADE:
-                
                 TFTSemanticoUtils.adicionarErroSemantico(unidade.start, f'identificador {unidade.getText()} nao representa uma unidade\n  tipo esperado: unidade\n  tipo encontrado: { TFTSemanticoUtils.getTipoString(tipo) }')
         return super().visitSaida_sinergia(ctx)

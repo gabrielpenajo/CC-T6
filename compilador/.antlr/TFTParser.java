@@ -17,17 +17,17 @@ public class TFTParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, COMENTARIO=11, WS=12, NUMERO=13, IDENT=14;
+		COMENTARIO=10, WS=11, NUMERO=12, IDENT=13;
 	public static final int
 		RULE_caracteristica = 0, RULE_unidade = 1, RULE_sinergia = 2, RULE_declaracao = 3, 
 		RULE_declaracao_caracteristica = 4, RULE_declaracao_unidade = 5, RULE_declaracao_sinergia = 6, 
-		RULE_declaracoes = 7, RULE_saida = 8, RULE_saida_sinergia = 9, RULE_saida_composicao = 10, 
-		RULE_saidas = 11, RULE_programa = 12;
+		RULE_declaracoes = 7, RULE_saida = 8, RULE_saida_sinergia = 9, RULE_saidas = 10, 
+		RULE_programa = 11;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"caracteristica", "unidade", "sinergia", "declaracao", "declaracao_caracteristica", 
 			"declaracao_unidade", "declaracao_sinergia", "declaracoes", "saida", 
-			"saida_sinergia", "saida_composicao", "saidas", "programa"
+			"saida_sinergia", "saidas", "programa"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -35,13 +35,13 @@ public class TFTParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, "'caracteristica'", "'unidade'", "'representa'", "','", "'sinergia'", 
-			"'requer'", "'encontrar'", "'sinergias'", "'para'", "'composicao'"
+			"'requer'", "'encontrar'", "'sinergias'", "'para'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, null, null, null, null, null, null, null, null, "COMENTARIO", 
+			null, null, null, null, null, null, null, null, null, null, "COMENTARIO", 
 			"WS", "NUMERO", "IDENT"
 		};
 	}
@@ -110,7 +110,7 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(26);
+			setState(24);
 			match(IDENT);
 			}
 		}
@@ -139,7 +139,7 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(28);
+			setState(26);
 			match(IDENT);
 			}
 		}
@@ -168,7 +168,7 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(30);
+			setState(28);
 			match(IDENT);
 			}
 		}
@@ -203,27 +203,27 @@ public class TFTParser extends Parser {
 		DeclaracaoContext _localctx = new DeclaracaoContext(_ctx, getState());
 		enterRule(_localctx, 6, RULE_declaracao);
 		try {
-			setState(35);
+			setState(33);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__0:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(32);
+				setState(30);
 				declaracao_caracteristica();
 				}
 				break;
 			case T__1:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(33);
+				setState(31);
 				declaracao_unidade();
 				}
 				break;
 			case T__4:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(34);
+				setState(32);
 				declaracao_sinergia();
 				}
 				break;
@@ -258,9 +258,9 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(37);
+			setState(35);
 			match(T__0);
-			setState(38);
+			setState(36);
 			caracteristica();
 			}
 		}
@@ -298,27 +298,27 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(40);
+			setState(38);
 			match(T__1);
-			setState(41);
+			setState(39);
 			unidade();
-			setState(42);
+			setState(40);
 			match(T__2);
-			setState(43);
+			setState(41);
 			caracteristica();
-			setState(48);
+			setState(46);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__3) {
 				{
 				{
-				setState(44);
+				setState(42);
 				match(T__3);
-				setState(45);
+				setState(43);
 				caracteristica();
 				}
 				}
-				setState(50);
+				setState(48);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -355,15 +355,15 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(51);
+			setState(49);
 			match(T__4);
-			setState(52);
+			setState(50);
 			sinergia();
-			setState(53);
+			setState(51);
 			match(T__5);
-			setState(54);
+			setState(52);
 			match(NUMERO);
-			setState(55);
+			setState(53);
 			caracteristica();
 			}
 		}
@@ -398,17 +398,17 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(60);
+			setState(58);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << T__4))) != 0)) {
 				{
 				{
-				setState(57);
+				setState(55);
 				declaracao();
 				}
 				}
-				setState(62);
+				setState(60);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -429,9 +429,6 @@ public class TFTParser extends Parser {
 		public Saida_sinergiaContext saida_sinergia() {
 			return getRuleContext(Saida_sinergiaContext.class,0);
 		}
-		public Saida_composicaoContext saida_composicao() {
-			return getRuleContext(Saida_composicaoContext.class,0);
-		}
 		public SaidaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -444,25 +441,11 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(63);
+			setState(61);
 			match(T__6);
-			setState(66);
-			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case T__7:
-				{
-				setState(64);
-				saida_sinergia();
-				}
-				break;
-			case T__9:
-				{
-				setState(65);
-				saida_composicao();
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
+			{
+			setState(62);
+			saida_sinergia();
 			}
 			}
 		}
@@ -497,80 +480,25 @@ public class TFTParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(68);
+			setState(64);
 			match(T__7);
-			setState(69);
+			setState(65);
 			match(T__8);
-			setState(70);
+			setState(66);
 			unidade();
-			setState(75);
+			setState(71);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__3) {
 				{
 				{
-				setState(71);
+				setState(67);
 				match(T__3);
-				setState(72);
+				setState(68);
 				unidade();
 				}
 				}
-				setState(77);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class Saida_composicaoContext extends ParserRuleContext {
-		public List<SinergiaContext> sinergia() {
-			return getRuleContexts(SinergiaContext.class);
-		}
-		public SinergiaContext sinergia(int i) {
-			return getRuleContext(SinergiaContext.class,i);
-		}
-		public Saida_composicaoContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_saida_composicao; }
-	}
-
-	public final Saida_composicaoContext saida_composicao() throws RecognitionException {
-		Saida_composicaoContext _localctx = new Saida_composicaoContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_saida_composicao);
-		int _la;
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(78);
-			match(T__9);
-			setState(79);
-			match(T__8);
-			setState(80);
-			sinergia();
-			setState(85);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			while (_la==T__3) {
-				{
-				{
-				setState(81);
-				match(T__3);
-				setState(82);
-				sinergia();
-				}
-				}
-				setState(87);
+				setState(73);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -602,22 +530,22 @@ public class TFTParser extends Parser {
 
 	public final SaidasContext saidas() throws RecognitionException {
 		SaidasContext _localctx = new SaidasContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_saidas);
+		enterRule(_localctx, 20, RULE_saidas);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(91);
+			setState(77);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__6) {
 				{
 				{
-				setState(88);
+				setState(74);
 				saida();
 				}
 				}
-				setState(93);
+				setState(79);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -650,15 +578,15 @@ public class TFTParser extends Parser {
 
 	public final ProgramaContext programa() throws RecognitionException {
 		ProgramaContext _localctx = new ProgramaContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_programa);
+		enterRule(_localctx, 22, RULE_programa);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(94);
+			setState(80);
 			declaracoes();
-			setState(95);
+			setState(81);
 			saidas();
-			setState(96);
+			setState(82);
 			match(EOF);
 			}
 		}
@@ -674,29 +602,26 @@ public class TFTParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\20e\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\17W\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4"+
-		"\f\t\f\4\r\t\r\4\16\t\16\3\2\3\2\3\3\3\3\3\4\3\4\3\5\3\5\3\5\5\5&\n\5"+
-		"\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\3\7\7\7\61\n\7\f\7\16\7\64\13\7\3\b\3"+
-		"\b\3\b\3\b\3\b\3\b\3\t\7\t=\n\t\f\t\16\t@\13\t\3\n\3\n\3\n\5\nE\n\n\3"+
-		"\13\3\13\3\13\3\13\3\13\7\13L\n\13\f\13\16\13O\13\13\3\f\3\f\3\f\3\f\3"+
-		"\f\7\fV\n\f\f\f\16\fY\13\f\3\r\7\r\\\n\r\f\r\16\r_\13\r\3\16\3\16\3\16"+
-		"\3\16\3\16\2\2\17\2\4\6\b\n\f\16\20\22\24\26\30\32\2\2\2_\2\34\3\2\2\2"+
-		"\4\36\3\2\2\2\6 \3\2\2\2\b%\3\2\2\2\n\'\3\2\2\2\f*\3\2\2\2\16\65\3\2\2"+
-		"\2\20>\3\2\2\2\22A\3\2\2\2\24F\3\2\2\2\26P\3\2\2\2\30]\3\2\2\2\32`\3\2"+
-		"\2\2\34\35\7\20\2\2\35\3\3\2\2\2\36\37\7\20\2\2\37\5\3\2\2\2 !\7\20\2"+
-		"\2!\7\3\2\2\2\"&\5\n\6\2#&\5\f\7\2$&\5\16\b\2%\"\3\2\2\2%#\3\2\2\2%$\3"+
-		"\2\2\2&\t\3\2\2\2\'(\7\3\2\2()\5\2\2\2)\13\3\2\2\2*+\7\4\2\2+,\5\4\3\2"+
-		",-\7\5\2\2-\62\5\2\2\2./\7\6\2\2/\61\5\2\2\2\60.\3\2\2\2\61\64\3\2\2\2"+
-		"\62\60\3\2\2\2\62\63\3\2\2\2\63\r\3\2\2\2\64\62\3\2\2\2\65\66\7\7\2\2"+
-		"\66\67\5\6\4\2\678\7\b\2\289\7\17\2\29:\5\2\2\2:\17\3\2\2\2;=\5\b\5\2"+
-		"<;\3\2\2\2=@\3\2\2\2><\3\2\2\2>?\3\2\2\2?\21\3\2\2\2@>\3\2\2\2AD\7\t\2"+
-		"\2BE\5\24\13\2CE\5\26\f\2DB\3\2\2\2DC\3\2\2\2E\23\3\2\2\2FG\7\n\2\2GH"+
-		"\7\13\2\2HM\5\4\3\2IJ\7\6\2\2JL\5\4\3\2KI\3\2\2\2LO\3\2\2\2MK\3\2\2\2"+
-		"MN\3\2\2\2N\25\3\2\2\2OM\3\2\2\2PQ\7\f\2\2QR\7\13\2\2RW\5\6\4\2ST\7\6"+
-		"\2\2TV\5\6\4\2US\3\2\2\2VY\3\2\2\2WU\3\2\2\2WX\3\2\2\2X\27\3\2\2\2YW\3"+
-		"\2\2\2Z\\\5\22\n\2[Z\3\2\2\2\\_\3\2\2\2][\3\2\2\2]^\3\2\2\2^\31\3\2\2"+
-		"\2_]\3\2\2\2`a\5\20\t\2ab\5\30\r\2bc\7\2\2\3c\33\3\2\2\2\t%\62>DMW]";
+		"\f\t\f\4\r\t\r\3\2\3\2\3\3\3\3\3\4\3\4\3\5\3\5\3\5\5\5$\n\5\3\6\3\6\3"+
+		"\6\3\7\3\7\3\7\3\7\3\7\3\7\7\7/\n\7\f\7\16\7\62\13\7\3\b\3\b\3\b\3\b\3"+
+		"\b\3\b\3\t\7\t;\n\t\f\t\16\t>\13\t\3\n\3\n\3\n\3\13\3\13\3\13\3\13\3\13"+
+		"\7\13H\n\13\f\13\16\13K\13\13\3\f\7\fN\n\f\f\f\16\fQ\13\f\3\r\3\r\3\r"+
+		"\3\r\3\r\2\2\16\2\4\6\b\n\f\16\20\22\24\26\30\2\2\2P\2\32\3\2\2\2\4\34"+
+		"\3\2\2\2\6\36\3\2\2\2\b#\3\2\2\2\n%\3\2\2\2\f(\3\2\2\2\16\63\3\2\2\2\20"+
+		"<\3\2\2\2\22?\3\2\2\2\24B\3\2\2\2\26O\3\2\2\2\30R\3\2\2\2\32\33\7\17\2"+
+		"\2\33\3\3\2\2\2\34\35\7\17\2\2\35\5\3\2\2\2\36\37\7\17\2\2\37\7\3\2\2"+
+		"\2 $\5\n\6\2!$\5\f\7\2\"$\5\16\b\2# \3\2\2\2#!\3\2\2\2#\"\3\2\2\2$\t\3"+
+		"\2\2\2%&\7\3\2\2&\'\5\2\2\2\'\13\3\2\2\2()\7\4\2\2)*\5\4\3\2*+\7\5\2\2"+
+		"+\60\5\2\2\2,-\7\6\2\2-/\5\2\2\2.,\3\2\2\2/\62\3\2\2\2\60.\3\2\2\2\60"+
+		"\61\3\2\2\2\61\r\3\2\2\2\62\60\3\2\2\2\63\64\7\7\2\2\64\65\5\6\4\2\65"+
+		"\66\7\b\2\2\66\67\7\16\2\2\678\5\2\2\28\17\3\2\2\29;\5\b\5\2:9\3\2\2\2"+
+		";>\3\2\2\2<:\3\2\2\2<=\3\2\2\2=\21\3\2\2\2><\3\2\2\2?@\7\t\2\2@A\5\24"+
+		"\13\2A\23\3\2\2\2BC\7\n\2\2CD\7\13\2\2DI\5\4\3\2EF\7\6\2\2FH\5\4\3\2G"+
+		"E\3\2\2\2HK\3\2\2\2IG\3\2\2\2IJ\3\2\2\2J\25\3\2\2\2KI\3\2\2\2LN\5\22\n"+
+		"\2ML\3\2\2\2NQ\3\2\2\2OM\3\2\2\2OP\3\2\2\2P\27\3\2\2\2QO\3\2\2\2RS\5\20"+
+		"\t\2ST\5\26\f\2TU\7\2\2\3U\31\3\2\2\2\7#\60<IO";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

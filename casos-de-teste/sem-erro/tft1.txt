@@ -23,9 +23,7 @@ unidade lux representa demacia, mago
 unidade lucian representa demacia, atirador
 
 encontrar sinergias para ashe, jhin, lissandra, sejuani, olaf // retorna quais sinergias podem ser feitas
-encontrar composicao para freljord1, demacia2 // retorna quais campeões são necessários 
 
 // saida gerada
 
-// ashe, jhin, lissandra formam freljord1, atirador1
-// freljord1, demacia2 utiliza lux, lucian, ashe, lissandra
+// as unidades ashe, jhin, lissandra, sejuani e olaf ativam as sinergias freljord2, atirador1 e mago1

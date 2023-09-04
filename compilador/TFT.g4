@@ -27,9 +27,8 @@ declaracao_unidade: 'unidade' unidade 'representa' caracteristica (',' caracteri
 declaracao_sinergia: 'sinergia' sinergia 'requer' NUMERO caracteristica;
 declaracoes: (declaracao)*;
 
-saida: 'encontrar' (saida_sinergia | saida_composicao);
+saida: 'encontrar' (saida_sinergia);
 saida_sinergia: 'sinergias' 'para' unidade (',' unidade)*;  
-saida_composicao: 'composicao' 'para' sinergia (',' sinergia)*;  
 saidas: (saida)*;
 
 programa: declaracoes saidas EOF;
